@@ -10871,9 +10871,16 @@ section {
 
 
 
+.card-shadow{
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  margin: 10px;
+  border-radius: 0.3rem;
+}
 
-
-
+.offer-title-bg {
+  background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+  color: #FFFFFF;
+}
 
 .header-gradient-bg{
   /* background-image: linear-gradient(to top, #09203f 0%, #537895 100%); */
@@ -10884,6 +10891,7 @@ section {
 .btn-cv{
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   color: #09203f;
+  outline: none;
 }
 
 .btn-cv:hover{
@@ -10959,5 +10967,3 @@ section {
   transform: scale(0.8);
   transition-duration: 0.5s;
 }
-
- 
