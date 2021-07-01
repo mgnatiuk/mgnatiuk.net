@@ -10906,7 +10906,20 @@ section {
   background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
 }
 
- 
+.social:hover {
+  transform: scale(1.1);
+}
+
+.social {
+  color: #FFFFFF;
+  transform: scale(0.8);
+  transition-duration: 0.5s;
+}
+
+.line-height-2{
+  line-height: 2;
+}
+
 @media (min-width: 576px) { 
   .img-fluid-profile-photo{
     margin-bottom: 10px;
@@ -10957,13 +10970,3 @@ section {
   margin-bottom: 10px;
   width: 15%;
 }}
-
-.social:hover {
-  transform: scale(1.1);
-}
-
-.social {
-  color: #FFFFFF;
-  transform: scale(0.8);
-  transition-duration: 0.5s;
-}
