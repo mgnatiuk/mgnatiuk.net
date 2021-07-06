@@ -10886,9 +10886,7 @@ section {
 }
 
 .header-gradient-bg{
-  /* background-image: linear-gradient(to top, #09203f 0%, #537895 100%); */
   background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
-  /* background-image: linear-gradient(to top, #b224ef 0%, #7579ff 100%); */
 }
 
 .btn-cv{
@@ -10927,6 +10925,11 @@ section {
   outline: none !important;
   background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
 }
+
+.btn-custom-primary:hover{
+  background-image: linear-gradient(to top, #1f3050 0%, #183261 1%, #1e4383 100%);
+}
+
 .swal-button .swal-button--confirm{
   color: #FFFFFF;
   outline: none !important;
