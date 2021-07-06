@@ -43,16 +43,21 @@ function sendForm(event)
 
     if(from != null){
         var xhr = new XMLHttpRequest();
-        xhr.open("GET", "https://mgnatiuk-functions.azurewebsites.net/api/ReciveEmailFunction?code=QzejLcV6D07GLg1puWfOuapleHrPYJ6Nea4aDXM8atPVC1eDXJP8Xw==&from="+from+"&subject="+subject+"&text="+text+"&name=" + name, true);
-        xhr.send();
-    }else{
-        alert("Email is required.");
-    }
-    
+        // xhr.open("GET", "https://mgnatiuk-functions.azurewebsites.net/api/ReciveEmailFunction?code=QzejLcV6D07GLg1puWfOuapleHrPYJ6Nea4aDXM8atPVC1eDXJP8Xw==&from="+from+"&subject="+subject+"&text="+text+"&name=" + name, true);
+        // xhr.send();
+
     resetValueFor("name");
     resetValueFor("from");
     resetValueFor("subject");
     resetValueFor("text");
+    
+    swal({
+        title: "Here's a title!",
+      });
+    }else{
+        alert("Email is required.");
+    }
+    
     
 }
 

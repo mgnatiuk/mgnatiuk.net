@@ -10866,10 +10866,13 @@ section {
   padding-bottom: 9rem;
 }
 
+.form-radius{
+  border-radius: 0.3rem;
+}
 
-
-
-
+.margin-top-20{
+  margin-top: 20px;
+}
 
 .card-shadow{
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
@@ -10923,6 +10926,11 @@ section {
 .btn-custom-primary{
   outline: none !important;
   background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+}
+.swal-button .swal-button--confirm{
+  color: #FFFFFF;
+  outline: none !important;
+  background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%) !important;
 }
 
 @media (min-width: 576px) { 
