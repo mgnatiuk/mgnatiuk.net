@@ -33,17 +33,13 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
-function sendForm()
+function sendForm(event)
 {
 
-    
-
-    let name = document.getElementById("name").value;
-    let from = document.getElementById("from").value;
-    let subject = document.getElementById("subject").value;
-    let text = document.getElementById("text").value;
-
-    console.log(name + "  " + from + " " + subject + " " + text);
+    let name = getValueById("name");
+    let from = getValueById("from");
+    let subject = getValueById("subject");
+    let text = getValueById("text");
 
     if(from != null){
         var xhr = new XMLHttpRequest();
@@ -52,6 +48,20 @@ function sendForm()
     }else{
         alert("Email is required.");
     }
-    e.preventDefault();
+    
+    resetValueFor("name");
+    resetValueFor("from");
+    resetValueFor("subject");
+    resetValueFor("text");
     
 }
+
+ function resetValueFor(id) {
+    var element = document.getElementById(id);
+    element.value = "";
+  }   
+  
+  function getValueById(id){
+      var value = document.getElementById(id).value;
+      return value;
+  }
