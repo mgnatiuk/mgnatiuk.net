@@ -32,3 +32,26 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+function sendForm()
+{
+
+    
+
+    let name = document.getElementById("name").value;
+    let from = document.getElementById("from").value;
+    let subject = document.getElementById("subject").value;
+    let text = document.getElementById("text").value;
+
+    console.log(name + "  " + from + " " + subject + " " + text);
+
+    if(from != null){
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://mgnatiuk-functions.azurewebsites.net/api/ReciveEmailFunction?code=QzejLcV6D07GLg1puWfOuapleHrPYJ6Nea4aDXM8atPVC1eDXJP8Xw==&from="+from+"&subject="+subject+"&text="+text+"&name=" + name, true);
+        xhr.send();
+    }else{
+        alert("Email is required.");
+    }
+    e.preventDefault();
+    
+}

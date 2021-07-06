@@ -10920,6 +10920,11 @@ section {
   line-height: 2;
 }
 
+.btn-custom-primary{
+  outline: none !important;
+  background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+}
+
 @media (min-width: 576px) { 
   .img-fluid-profile-photo{
     margin-bottom: 10px;
