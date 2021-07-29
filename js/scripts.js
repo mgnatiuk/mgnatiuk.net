@@ -32,3 +32,36 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+function sendForm(event)
+{
+    let name = getValueById("name");
+    let from = getValueById("from");
+    let subject = getValueById("subject");
+    let text = getValueById("text");
+
+    if(getValueById("name")){
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://mgnatiuk-functions.azurewebsites.net/api/ReciveEmailFunction?code=QzejLcV6D07GLg1puWfOuapleHrPYJ6Nea4aDXM8atPVC1eDXJP8Xw==&from="+from+"&subject="+subject+"&text="+text+"&name=" + name, true);
+        xhr.send();
+
+        resetValueFor("name");
+        resetValueFor("from");
+        resetValueFor("subject");
+        resetValueFor("text");
+    
+        swal("Success", "Email was sent", "success");
+    }else{
+        swal("Warning", "Email is required", "warning");
+    }
+}
+
+ function resetValueFor(id) {
+    var element = document.getElementById(id);
+    element.value = "";
+  }   
+  
+  function getValueById(id){
+      var value = document.getElementById(id).value;
+      return value;
+  }

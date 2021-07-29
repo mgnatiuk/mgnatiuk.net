@@ -10866,24 +10866,33 @@ section {
   padding-bottom: 9rem;
 }
 
+.form-radius{
+  border-radius: 0.3rem;
+}
 
+.margin-top-20{
+  margin-top: 20px;
+}
 
+.card-shadow{
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  margin: 10px;
+  border-radius: 0.3rem;
+}
 
-
-
-
-
-
+.offer-title-bg {
+  background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+  color: #FFFFFF;
+}
 
 .header-gradient-bg{
-  /* background-image: linear-gradient(to top, #09203f 0%, #537895 100%); */
   background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
-  /* background-image: linear-gradient(to top, #b224ef 0%, #7579ff 100%); */
 }
 
 .btn-cv{
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   color: #09203f;
+  outline: none;
 }
 
 .btn-cv:hover{
@@ -10898,7 +10907,35 @@ section {
   background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
 }
 
- 
+.social:hover {
+  transform: scale(1.1);
+}
+
+.social {
+  color: #FFFFFF;
+  transform: scale(0.8);
+  transition-duration: 0.5s;
+}
+
+.line-height-2{
+  line-height: 2;
+}
+
+.btn-custom-primary{
+  outline: none !important;
+  background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+}
+
+.btn-custom-primary:hover{
+  background-image: linear-gradient(to top, #1f3050 0%, #183261 1%, #1e4383 100%);
+}
+
+.swal-button .swal-button--confirm{
+  color: #FFFFFF;
+  outline: none !important;
+  background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%) !important;
+}
+
 @media (min-width: 576px) { 
   .img-fluid-profile-photo{
     margin-bottom: 10px;
@@ -10932,13 +10969,11 @@ section {
   width: 25%;
 } }
 
- 
 @media (min-width: 992px) { .img-fluid-profile-photo{
   margin-bottom: 10px;
   width: 18%;
 } }
 
- 
 @media (min-width: 1200px) { .img-fluid-profile-photo{
   margin-bottom: 10px;
   width: 18%;
@@ -10949,15 +10984,3 @@ section {
   margin-bottom: 10px;
   width: 15%;
 }}
-
-.social:hover {
-  transform: scale(1.1);
-}
-
-.social {
-  color: #FFFFFF;
-  transform: scale(0.8);
-  transition-duration: 0.5s;
-}
-
- 
