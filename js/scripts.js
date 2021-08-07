@@ -56,7 +56,7 @@ function sendForm(event) {
 
 function sendEmail(formData) {
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://mgnatiuk-functions.azurewebsites.net/api/ReciveEmailFunction?code=QzejLcV6D07GLg1puWfOuapleHrPYJ6Nea4aDXM8atPVC1eDXJP8Xw==&from=" + formData.from + "&subject=" + formData.subject + "&text=" + formData.text + "&name=" + formData.name, true);
+    xhr.open("GET", atob("aHR0cHM6Ly9tZ25hdGl1ay1mdW5jdGlvbnMuYXp1cmV3ZWJzaXRlcy5uZXQvYXBpL1JlY2l2ZUVtYWlsRnVuY3Rpb24/Y29kZT1RemVqTGNWNkQwN0dMZzFwdVdmT3VhcGxlSHJQWUo2TmVhNGFEWE04YXRQVkMxZURYSlA4WHc9PSZmcm9tPQ==") + formData.from + "&subject=" + formData.subject + "&text=" + formData.text + "&name=" + formData.name, true);
     xhr.send();
     resetValues();
     swal("Success", "Email was sent", "success");
