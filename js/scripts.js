@@ -29,10 +29,13 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         });
     });
-
 });
 
-function sendForm(event) {
+document.getElementById("btnSendForm").addEventListener("click", function(){
+    sendForm();
+});
+ 
+function sendForm() {
 
     var formData = {
         name: getValueById("name"),
@@ -41,15 +44,8 @@ function sendForm(event) {
         text: getValueById("text")
     }
 
-    if (!formData.name && !formData.from && !formData.subject && !formData.text) {
-        swal("Warning", "Some fields of this form are empty.", "warning");
-        event.preventDefault();
-    }
-
-    if (!validateEmail(formData.from)) {
-        swal("Warning", "Email is not valid.", "warning");
-        event.preventDefault();
-    }
+    if (validteForm(formData))
+        return false;
 
     sendEmail(formData);
 }
@@ -58,20 +54,35 @@ function sendEmail(formData) {
     var xhr = new XMLHttpRequest();
     xhr.open("GET", atob("aHR0cHM6Ly9tZ25hdGl1ay1mdW5jdGlvbnMuYXp1cmV3ZWJzaXRlcy5uZXQvYXBpL1JlY2l2ZUVtYWlsRnVuY3Rpb24/Y29kZT1RemVqTGNWNkQwN0dMZzFwdVdmT3VhcGxlSHJQWUo2TmVhNGFEWE04YXRQVkMxZURYSlA4WHc9PSZmcm9tPQ==") + formData.from + "&subject=" + formData.subject + "&text=" + formData.text + "&name=" + formData.name, true);
     xhr.send();
-    resetValues();
+    resetValues("contact-form");
     swal("Success", "Email was sent", "success");
 }
 
-function resetValues() {
-    resetValueFor("name");
-    resetValueFor("from");
-    resetValueFor("subject");
-    resetValueFor("text");
+function validteForm(formData) {
+    if (!formData.name || !formData.from || !formData.subject || !formData.text) {
+        swal("Warning", "Some fields of this form are empty.", "warning");
+        return true;
+    }
+
+    if (!validateEmail(formData.from)) {
+        swal("Warning", "Email is not valid.", "warning");
+        return true;
+    }
+
+    return false;
 }
 
 function resetValueFor(id) {
     var element = document.getElementById(id);
     element.value = "";
+}
+
+function resetValues(fieldid) {
+    var container = document.getElementById(fieldid);
+    var fields = container.getElementsByClassName('form-field');
+    for (var index = 0; index < fields.length; ++index) {
+        fields[index].value = '';
+    }
 }
 
 function getValueById(id) {
