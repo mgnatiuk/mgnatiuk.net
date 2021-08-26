@@ -35,6 +35,11 @@ document.getElementById("btnSendForm").addEventListener("click", function(){
     sendForm();
 });
  
+function getValueById(id) {
+    var value = document.getElementById(id).value;
+    return value;
+}
+
 function sendForm() {
 
     var formData = {
@@ -72,9 +77,9 @@ function validteForm(formData) {
     return false;
 }
 
-function resetValueFor(id) {
-    var element = document.getElementById(id);
-    element.value = "";
+function validateEmail(email) {
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
 }
 
 function resetValues(fieldid) {
@@ -83,14 +88,4 @@ function resetValues(fieldid) {
     for (var index = 0; index < fields.length; ++index) {
         fields[index].value = '';
     }
-}
-
-function getValueById(id) {
-    var value = document.getElementById(id).value;
-    return value;
-}
-
-function validateEmail(email) {
-    var re = /\S+@\S+\.\S+/;
-    return re.test(email);
 }
