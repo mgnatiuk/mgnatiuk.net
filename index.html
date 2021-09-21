@@ -17,7 +17,6 @@
          window.dataLayer = window.dataLayer || [];
          function gtag(){dataLayer.push(arguments);}
          gtag('js', new Date());
-
          gtag('config', 'G-G0XGEJCKN4');
       </script>
    </head>
@@ -62,10 +61,10 @@
                   <ul class="line-height-2">
                      <li>.NET Core, ASP.NET MVC, Web API, Entity Framework.</li>
                      <li>Microsoft SQL Server, Oracle Database, PostgreSQL.</li>
-                     <li>Angular, HTML5, CSS3, Bootstrap, Telerik UI, JavaScript, TypeScript.</li>
+                     <li>HTML5, CSS3, Bootstrap, Telerik UI, JavaScript, TypeScript.</li>
                      <li>Azure: Storage Account, Functions, App Services, Service Bus.</li>
-                     <li>AutoMapper, Humanizer, FluentValidation, XUnit, MOQ, Swagger API Documentation, NLog.</li>
-                     <li>SOLID, DDD, Postman.</li>
+                     <li>AutoMapper, Humanizer, FluentValidation, XUnit, MOQ, Swagger API Documentation, NLog, Postman.</li>
+                     <li>SOLID, DDD.</li>
                      <li>Jira, Agile, Scrum, Understanding CI/CD processes, Git,
                         GitLab.</li>
                      <li>Balsamiq Wireframes for views prototyping.</li>
@@ -120,25 +119,25 @@
             <div class="row gx-4 justify-content-center">
                <div class="col-lg-5">
                   <h2>Contact me</h2>
-                  <div class="row">
+                  <div class="row" id="contact-form">
                      <div class="col-md-5 col-sm-12 margin-top-20">
                         <label for="name" class="form-label lead">Your name</label>
-                        <input type="text" class="form-control form-radius" id="name" placeholder="">
+                        <input type="text" class="form-control form-radius form-field" id="name" placeholder="">
                      </div>
                      <div class="col-md-7 col-sm-12 margin-top-20">
                         <label for="from" class="form-label lead">Email address</label>
-                        <input type="email" class="form-control form-radius" id="from" placeholder="">
+                        <input type="email" class="form-control form-radius form-field" id="from" placeholder="">
                      </div>
                      <div class="col-12 margin-top-20">
                         <label for="subject" class="form-label lead">Subject</label>
-                        <input type="text" class="form-control form-radius" id="subject" placeholder="">
+                        <input type="text" class="form-control form-radius form-field" id="subject" placeholder="">
                      </div>
                      <div class="form-group margin-top-20">
                         <label class="lead" for="text">Message</label>
-                        <textarea class="form-control form-radius" id="text" rows="3"></textarea>
+                        <textarea class="form-control form-radius form-field" id="text" rows="3"></textarea>
                      </div>
                      <div class="d-grid gap-2">
-                        <button onclick="sendForm()" class="btn btn-primary btn-custom-primary margin-top-20 btn-lg"><i class="fa fa-paper-plane-o"></i> Send email</button>
+                        <button id="btnSendForm" class="btn btn-primary btn-custom-primary margin-top-20 btn-lg"><i class="fa fa-paper-plane-o"></i> Send email</button>
                      </div>
                   </div>
                </div>
@@ -150,7 +149,7 @@
          <div class="text-center center-block">
             <a href="https://github.com/mgnatiuk" target="_blank"><i id="social-fb" class="fa fa-github-square fa-2x social"></i></a>
             <a href="https://www.linkedin.com/in/mykola-gnatiuk-508994138/" target="_blank"><i id="social-tw" class="fa fa-linkedin fa-2x social"></i></a>
-            <a href="mailto:gmstudio@gmail.com" target="_blank"><i id="social-em" class="fa fa-envelope-square fa-2x social"></i></a>
+            <a href="mailto:mikolaj.gnatiuk@gmail.com" target="_blank"><i id="social-em" class="fa fa-envelope-square fa-2x social"></i></a>
          </div>
          <div class="container px-4">
             <p class="m-0 text-center text-white">Copyright &copy; Mykola Gnatiuk 2021</p>
