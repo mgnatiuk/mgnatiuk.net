@@ -11420,16 +11420,7 @@ button:focus {
 .card.card-has-bg:hover .card-img-overlay {
   transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
   background: #234f6d;
-  background: linear-gradient(0deg, rgba(4, 69, 114, 0.5) 0%, rgba(4, 69, 114, 1) 100%);
-}
-
-.card .card-footer {
-  background: none;
-  border-top: none;
-}
-
-.card .card-footer .media img {
-  border: solid 3px rgba(234, 95, 0, 0.3);
+  background: linear-gradient(0deg, rgba(7, 84, 138, 0.5) 0%, rgb(7, 70, 114) 100%);
 }
 
 .card .card-meta {
@@ -11438,7 +11429,7 @@ button:focus {
 
 .card .card-body {
   transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
-  margin-top: 10px;
+  margin-top: 25px;
 }
 
 .card:hover {
@@ -11447,12 +11438,12 @@ button:focus {
 }
 
 .card:hover .card-body {
-  margin-top: 30px;
+  margin-top: 50px;
   transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .card .card-img-overlay {
   transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
   background: #234f6d;
-  background: linear-gradient(0deg, rgba(35, 79, 109, 0.3785889355742297) 0%, rgba(69, 95, 113, 1) 100%);
+  background: linear-gradient(0deg, rgba(13, 110, 253, 0.5) 0%, rgba(4, 69, 114, 1) 100%);
 }
