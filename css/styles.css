@@ -11279,7 +11279,7 @@ button:focus {
 
 .section-title {
   color: #2a5298;
-  font-size: xxx-large;
+  font-size: xxx-large !important;
 }
 
 @media (min-width: 576px) {
