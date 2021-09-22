@@ -11279,7 +11279,7 @@ button:focus {
 
 .section-title {
   color: #2a5298;
-  font-size: xxx-large !important;
+  font-size: xxx-large;
 }
 
 @media (min-width: 576px) {
@@ -11294,12 +11294,20 @@ button:focus {
     margin-bottom: 10px;
     width: 50%;
   }
+
+  .section-title {
+    font-size: xx-large;
+  }
 }
 
 @media (min-width: 320px) {
   .img-fluid-profile-photo {
     margin-bottom: 10px;
     width: 50%;
+  }
+
+  .section-title {
+    font-size: xx-large;
   }
 }
 
@@ -11314,6 +11322,9 @@ button:focus {
   .img-fluid-profile-photo {
     margin-bottom: 10px;
     width: 25%;
+  }
+  .section-title {
+    font-size: xxx-large;
   }
 }
 
@@ -11431,7 +11442,7 @@ button:focus {
 }
 
 .card:hover {
-  cursor: pointer;
+  cursor: default;
   transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
