@@ -11282,6 +11282,11 @@ button:focus {
   font-size: xxx-large;
 }
 
+.language-level {
+  color: #105787;
+  font-weight: lighter;
+}
+
 @media (min-width: 576px) {
   .img-fluid-profile-photo {
     margin-bottom: 10px;
