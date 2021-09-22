@@ -11279,6 +11279,12 @@ button:focus {
 
 .section-title {
   color: #2a5298;
+  font-size: xxx-large;
+}
+
+.language-level {
+  color: #105787;
+  font-weight: lighter;
 }
 
 @media (min-width: 576px) {
@@ -11293,12 +11299,20 @@ button:focus {
     margin-bottom: 10px;
     width: 50%;
   }
+
+  .section-title {
+    font-size: xxx-large;
+  }
 }
 
 @media (min-width: 320px) {
   .img-fluid-profile-photo {
     margin-bottom: 10px;
     width: 50%;
+  }
+
+  .section-title {
+    font-size: xxx-large;
   }
 }
 
@@ -11307,12 +11321,18 @@ button:focus {
     margin-bottom: 10px;
     width: 50%;
   }
+  .section-title {
+    font-size: xxx-large;
+  }
 }
 
 @media (min-width: 768px) {
   .img-fluid-profile-photo {
     margin-bottom: 10px;
     width: 25%;
+  }
+  .section-title {
+    font-size: xxx-large;
   }
 }
 
@@ -11327,6 +11347,10 @@ button:focus {
   .img-fluid-profile-photo {
     margin-bottom: 10px;
     width: 18%;
+  }
+
+  .section-title {
+    font-size: xxx-large;
   }
 }
 
@@ -11345,6 +11369,7 @@ button:focus {
   min-height: 260px;
   box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
   margin-bottom: 25px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 @media (max-width: 768px) {
@@ -11408,16 +11433,7 @@ button:focus {
 .card.card-has-bg:hover .card-img-overlay {
   transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
   background: #234f6d;
-  background: linear-gradient(0deg, rgba(4, 69, 114, 0.5) 0%, rgba(4, 69, 114, 1) 100%);
-}
-
-.card .card-footer {
-  background: none;
-  border-top: none;
-}
-
-.card .card-footer .media img {
-  border: solid 3px rgba(234, 95, 0, 0.3);
+  background: linear-gradient(0deg, rgba(7, 84, 138, 0.5) 0%, rgb(7, 70, 114) 100%);
 }
 
 .card .card-meta {
@@ -11426,21 +11442,21 @@ button:focus {
 
 .card .card-body {
   transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
-  margin-top: 10px;
+  margin-top: 25px;
 }
 
 .card:hover {
-  cursor: pointer;
+  cursor: default;
   transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .card:hover .card-body {
-  margin-top: 30px;
+  margin-top: 50px;
   transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .card .card-img-overlay {
   transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
   background: #234f6d;
-  background: linear-gradient(0deg, rgba(35, 79, 109, 0.3785889355742297) 0%, rgba(69, 95, 113, 1) 100%);
+  background: linear-gradient(0deg, rgba(13, 110, 253, 0.5) 0%, rgba(4, 69, 114, 1) 100%);
 }
