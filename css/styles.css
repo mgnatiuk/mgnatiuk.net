@@ -11312,7 +11312,7 @@ button:focus {
   }
 
   .section-title {
-    font-size: xx-large;
+    font-size: xxx-large;
   }
 }
 
@@ -11320,6 +11320,9 @@ button:focus {
   .img-fluid-profile-photo {
     margin-bottom: 10px;
     width: 50%;
+  }
+  .section-title {
+    font-size: xxx-large;
   }
 }
 
@@ -11344,6 +11347,10 @@ button:focus {
   .img-fluid-profile-photo {
     margin-bottom: 10px;
     width: 18%;
+  }
+
+  .section-title {
+    font-size: xxx-large;
   }
 }
 
