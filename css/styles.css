@@ -11460,3 +11460,21 @@ button:focus {
   background: #234f6d;
   background: linear-gradient(0deg, rgba(13, 110, 253, 0.5) 0%, rgba(4, 69, 114, 1) 100%);
 }
+
+.text-fade-animation span {
+  opacity: 0;
+  -webkit-transition: opacity 1.2s;
+}
+
+.text-fade-animation span.visible {
+  opacity: 1;
+}
+
+.text-fade-animation li {
+  opacity: 0;
+  -webkit-transition: opacity 1.2s;
+}
+
+.text-fade-animation li.visible {
+  opacity: 1;
+}
