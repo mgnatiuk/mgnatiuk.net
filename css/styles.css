@@ -11463,7 +11463,7 @@ button:focus {
 
 .text-fade-animation span {
   opacity: 0;
-  -webkit-transition: opacity 1.2s;
+  -webkit-transition: opacity 1s;
 }
 
 .text-fade-animation span.visible {
@@ -11472,7 +11472,7 @@ button:focus {
 
 .text-fade-animation li {
   opacity: 0;
-  -webkit-transition: opacity 1.2s;
+  -webkit-transition: opacity 1s;
 }
 
 .text-fade-animation li.visible {
