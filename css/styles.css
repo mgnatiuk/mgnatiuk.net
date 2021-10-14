@@ -490,6 +490,11 @@ progress {
   font-weight: 300;
 }
 
+.lead-text-shadow {
+  font-weight: lighter;
+  text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2), 0px -5px 35px rgba(255, 255, 255, 0.3);
+}
+
 .display-1 {
   font-size: calc(1.625rem + 4.5vw);
   font-weight: 300;
@@ -11215,7 +11220,8 @@ section {
 }
 
 .header-gradient-bg {
-  background-image: var(--main-gradient-color);
+  background-image: url("/assets//images/bg.png");
+  background-repeat: repeat;
 }
 
 .btn-cv {
