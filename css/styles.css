@@ -11220,8 +11220,7 @@ section {
 }
 
 .header-gradient-bg {
-  background-image: url("/assets//images/bg.png");
-  background-repeat: repeat;
+  background-image: var(--main-gradient-color);
 }
 
 .btn-cv {
