@@ -11279,8 +11279,7 @@ button:focus {
 
 .section-title {
   color: #2a5298;
-  /* font-size: xxx-large; */
-  font-size: 3.5em !important;
+  font-size: 3em !important;
 }
 
 .language-level {
@@ -11315,7 +11314,7 @@ button:focus {
 
   .section-title {
     /* font-size: xxx-large; */
-    font-size: 3.5em !important;
+    font-size: 3em !important;
   }
 }
 
@@ -11326,7 +11325,7 @@ button:focus {
   }
   .section-title {
     /* font-size: xxx-large; */
-    font-size: 3.5em !important;
+    font-size: 3em !important;
   }
 }
 
@@ -11336,8 +11335,7 @@ button:focus {
     width: 25%;
   }
   .section-title {
-    /* font-size: xxx-large; */
-    font-size: 3.5em !important;
+    font-size: xxx-large;
   }
 }
 
@@ -11355,8 +11353,7 @@ button:focus {
   }
 
   .section-title {
-    /* font-size: xxx-large; */
-    font-size: 3.5em !important;
+    font-size: xxx-large;
   }
 }
 
