@@ -3,7 +3,7 @@
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 10000; /* Sit on top */
-    padding-top: 30px; /* Location of the box */
+    padding-top: 50px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -18,8 +18,8 @@
 .modal-content {
     margin: auto;
     display: block;
-    width: 70%;
-    max-width: 60%;
+    width: 80%;
+    max-width: 800px;
 }
 
 /* Caption of Modal Image */
