@@ -11312,7 +11312,8 @@ button:focus {
   }
 
   .section-title {
-    font-size: xxx-large;
+    /* font-size: xxx-large; */
+    font-size: 3.5em !important;
   }
 }
 
@@ -11323,7 +11324,7 @@ button:focus {
   }
   .section-title {
     /* font-size: xxx-large; */
-    font-size: 3.5em;
+    font-size: 3.5em !important;
   }
 }
 
