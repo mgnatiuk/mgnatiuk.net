@@ -1,8 +1,9 @@
 {
     "routes": [
         {
-            "route": "/send",
-            "serve": "/api/ContactFormHttpFunction"
+            "route": "/api/send",
+            "serve": "/api/ContactFormHttpFunction",
+            "statusCode": 200
         }
     ]
 }
