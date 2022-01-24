@@ -14,14 +14,7 @@
    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png" />
    <!-- Core theme CSS (includes Bootstrap)-->
    <link href="css/styles.css" rel="stylesheet" />
-   <!-- Global site tag (gtag.js) - Google Analytics -->
-   <script async src="https://www.googletagmanager.com/gtag/js?id=G-G0XGEJCKN4"></script>
-   <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-      gtag('config', 'G-G0XGEJCKN4');
-   </script>
+   <link href="css/modal.css" rel="stylesheet" />
 </head>
 
 <body id="home">
@@ -36,6 +29,7 @@
             <ul class="navbar-nav ms-auto">
                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                <li class="nav-item"><a class="nav-link" href="#about">About me</a></li>
+               <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
                <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
@@ -49,9 +43,10 @@
             <img src="/assets/images/profile.jpeg" class="rounded-circle img-fluid-profile-photo">
          </div>
          <h1 class="fw-bolder">Mykola Gnatiuk</h1>
-         <p class="lead">Software Engineer at Soft<span class="font-weight-700">Serve</span> | Azure, .NET Core, WEB API
+         <p class="lead">Software Engineer at Soft<span class="font-weight-700">Serve</span> <br>
+            .NET Core, Azure, WEB API
          </p>
-         <a class="btn btn-lg btn-light btn-cv" href="/assets/documents/CV_MykolaGnatiuk.pdf"><i
+         <a class="btn btn-lg btn-light btn-cv" href="/assets/documents/Mykola Gnatiuk CV.pdf"><i
                class="fa fa-file-pdf-o"></i> Download CV </a>
       </div>
    </header>
@@ -65,34 +60,81 @@
                   I have been programming since I was 14.
                   Programming is my passion. I am interested in cloud technologies, especially Microsoft Azure,
                   and I would like to develop in this direction in the future.
-                  In my professional life, I use such technologies:</p>
+                  In my professional life, I use these technologies:
+               </p>
                <ul class="line-height-2">
-                  <li>.NET Core, ASP.NET MVC, Web API, Entity Framework.</li>
-                  <li>Microsoft SQL Server, Oracle Database, PostgreSQL.</li>
-                  <li>HTML5, CSS3, Bootstrap, Telerik UI, JavaScript, TypeScript.</li>
-                  <li>Azure: Storage Account, Functions, App Services, Service Bus.</li>
-                  <li>AutoMapper, Humanizer, FluentValidation, XUnit, MOQ, Swagger API Documentation, NLog, Postman.
+                  <li>
+                     .NET Core, ASP.NET MVC, Web API, Entity Framework.
                   </li>
-                  <li>SOLID, DDD.</li>
-                  <li>Jira, Agile, Scrum, Understanding CI/CD processes, Git,
-                     GitLab.</li>
-                  <li>Balsamiq Wireframes for views prototyping.</li>
+                  <li>
+                     Microsoft SQL Server, Oracle Database, PostgreSQL.
+                  </li>
+                  <li>
+                     HTML5, CSS3, Bootstrap, Telerik UI, JavaScript, TypeScript.
+                  </li>
+                  <li>
+                     Azure: Storage Account, Functions, App Services, Service Bus, Container Registry, Static Web App.
+                  </li>
+                  <li>
+                     Terraform, Docker.
+                  </li>
+                  <li>
+                     AutoMapper, FluentValidation, XUnit, MOQ, Swagger API Documentation, NLog, Log4Net, Postman.
+                  </li>
+                  <li>
+                     SOLID, DDD.
+                  </li>
+                  <li>
+                     Jira, Agile, Scrum, Git, Understanding CI/CD processes, GitLab.
+                  </li>
+                  <li>
+                     Balsamiq Wireframes for views prototyping.
+                  </li>
                </ul>
                <p class="lead">
                   <b>Education:</b> Polish-Japanese Academy of Information Technology.
                   <br>
                   <b>Languages:</b> English
-                  <span class="language-level">(B2)</span>, Polish
-                  <span class="language-level">(C2) </span>, Ukrainian
+                  <span class="language-level">(Intermediate Strong)</span>, Polish
+                  <span class="language-level">(Native) </span>, Ukrainian
                   <span class="language-level">(Native)</span>, Russian
-                  <span class="language-level">(C2) </span>.
+                  <span class="language-level">(Native) </span>.
                </p>
             </div>
          </div>
       </div>
    </section>
+   <!-- Certificates section-->
+   <section class="bg-light" id="certificates">
+      <div class="container px-4">
+         <div class="row gx-4 justify-content-center">
+            <div class="col-lg-8">
+               <h2 class="fw-bolder section-title">Certificates</h2>
+               <br>
+               <!-- The Modal -->
+               <div id="modal-window" class="modal">
+                  <img class="modal-content" id="modal-content">
+                  <div id="caption"></div>
+               </div>
+               <div class="row">
+                  <div class="col-md-6 col-sm-12">
+                     <div class="card card-radius">
+                        <img class="card-img-top modal-image cursor-zoom" src="assets/images/certificates/az-900.jpg"
+                           alt="Microsoft Azure Fundamentals (AZ-900)">
+                        <div class="card-header navbar-blue-custom text-center">
+                           <a class="nav-link text-white fw-bolder" target="_blank"
+                              href="https://www.credly.com/badges/8f6194f7-8679-430a-8bb9-49e5a6a3ccff">Microsoft
+                              Azure Fundamentals (AZ-900)</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
    <!-- Experience section-->
-   <section class="bg-light" id="experience">
+   <section id="experience">
       <div class="container px-4">
          <div class="row gx-4 justify-content-center">
             <div class="col-lg-8">
@@ -100,27 +142,27 @@
                <br>
                <div class="row">
                   <div class="col-md-6 col-sm-12">
-                     <div class="card text-white card-has-bg click-col"
-                        style="background-image:url('https://source.unsplash.com/600x900/?programmers');">
-                        <img class="card-img d-none" src="https://source.unsplash.com/600x900/?programmers">
+                     <div class="card card-radius text-white card-has-bg click-col"
+                        style="background-image:url('assets/images/jobs/bg-job-1.jpeg');">
+                        <img class="card-img d-none" src="/assets/images/jobs/bg-job-1.jpeg">
                         <div class="card-img-overlay d-flex flex-column">
                            <div class="card-body">
                               <small class="card-meta mb-2">SoftServe Sp. z o.o. | Poland</small>
-                              <h4 class="card-title mt-0 "><span>Software Engineer (.NET)</span></h4>
+                              <h4 class="card-title mt-0 "><span>.NET Software Engineer</span></h4>
                               <small><i class="far fa-clock"></i> November 2021 – Currently</small>
                            </div>
                         </div>
                      </div>
                   </div>
                   <div class="col-md-6 col-sm-12">
-                     <div class="card text-white card-has-bg click-col"
-                        style="background-image:url('https://source.unsplash.com/600x900/?code');">
-                        <img class="card-img d-none" src="https://source.unsplash.com/600x900/?code">
+                     <div class="card card-radius text-white card-has-bg click-col"
+                        style="background-image:url('assets/images/jobs/bg-job-2.jpeg');">
+                        <img class="card-img d-none" src="assets/images/jobs/bg-job-2.jpeg">
                         <div class="card-img-overlay d-flex flex-column">
                            <div class="card-body">
                               <small class="card-meta mb-2">Risco Software Sp. z o.o. | Poland</small>
                               <h4 class="card-title mt-0 "><span>Middle .NET Developer</span></h4>
-                              <small><i class="far fa-clock"></i>August 2017 – November 2021 (4 years 3 month)</small>
+                              <small><i class="far fa-clock"></i>August 2017 – November 2021 (4 years 4 months)</small>
                            </div>
                         </div>
                      </div>
@@ -128,9 +170,9 @@
                </div>
                <div class="row">
                   <div class="col-md-6 col-sm-12">
-                     <div class="card text-white card-has-bg click-col"
-                        style="background-image:url('https://source.unsplash.com/600x900/?codding');">
-                        <img class="card-img d-none" src="https://source.unsplash.com/600x900/?codding">
+                     <div class="card card-radius text-white card-has-bg click-col"
+                        style="background-image:url('/assets/images/jobs/bg-job-3.jpeg');">
+                        <img class="card-img d-none" src="/assets/images/jobs/bg-job-3.jpeg">
                         <div class="card-img-overlay d-flex flex-column">
                            <div class="card-body">
                               <small class="card-meta mb-2">Accenture Technology | Poland</small>
@@ -141,9 +183,9 @@
                      </div>
                   </div>
                   <div class="col-md-6 col-sm-12">
-                     <div class="card text-white card-has-bg click-col"
-                        style="background-image:url('https://source.unsplash.com/600x900/?programming');">
-                        <img class="card-img d-none" src="https://source.unsplash.com/600x900/?programming">
+                     <div class="card card-radius text-white card-has-bg click-col"
+                        style="background-image:url('/assets/images/jobs/bg-job-4.jpeg');">
+                        <img class="card-img d-none" src="/assets/images/jobs/bg-job-4.jpeg">
                         <div class="card-img-overlay d-flex flex-column">
                            <div class="card-body">
                               <small class="card-meta mb-2">Accenture Technology | Poland</small>
@@ -159,7 +201,7 @@
       </div>
    </section>
    <!-- Contact section-->
-   <section id="contact">
+   <section class="bg-light" id="contact">
       <div class="container px-4">
          <div class="row gx-4 justify-content-center">
             <div class="col-lg-5">
@@ -210,9 +252,10 @@
    </footer>
    <!-- Bootstrap core JS-->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-
-   <!-- Core theme JS-->
-   <script src="js/scripts.js"></script>
+   <!-- All JS-->
+   <script src="js/navigation.js"></script>
+   <script src="js/modal.js"></script>
+   <script src="js/form.js"></script>
 </body>
 
 </html>

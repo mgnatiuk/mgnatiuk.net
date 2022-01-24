@@ -11279,7 +11279,7 @@ button:focus {
 
 .section-title {
   color: #2a5298;
-  font-size: xxx-large;
+  font-size: 3em !important;
 }
 
 .language-level {
@@ -11301,7 +11301,8 @@ button:focus {
   }
 
   .section-title {
-    font-size: xx-large;
+    /* font-size: xx-large; */
+    font-size: 3.5em !important;
   }
 }
 
@@ -11312,7 +11313,8 @@ button:focus {
   }
 
   .section-title {
-    font-size: xxx-large;
+    /* font-size: xxx-large; */
+    font-size: 3em !important;
   }
 }
 
@@ -11322,7 +11324,8 @@ button:focus {
     width: 50%;
   }
   .section-title {
-    font-size: xxx-large;
+    /* font-size: xxx-large; */
+    font-size: 3em !important;
   }
 }
 
@@ -11357,7 +11360,7 @@ button:focus {
 @media (min-width: 1400px) {
   .img-fluid-profile-photo {
     margin-bottom: 10px;
-    width: 15%;
+    width: 17%;
   }
 }
 
@@ -11370,6 +11373,10 @@ button:focus {
   box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
   margin-bottom: 25px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.card-radius {
+  border-radius: 0.3rem;
 }
 
 @media (max-width: 768px) {
