@@ -1,1 +1,1 @@
-# mgnatiuk.github.io - online portfolio
+# mgnatiuk.net - online portfolio
