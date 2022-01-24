@@ -1,8 +1,8 @@
 {
     "routes": [
         {
-            "route": "/#home",
-            "serve": "/home"
+            "route": "/home",
+            "serve": "/#home"
         }
     ]
 }
