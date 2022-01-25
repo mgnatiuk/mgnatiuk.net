@@ -1,5 +1,5 @@
 {
-    "route": [
+    "routes": [
         {
             "route": "/send",
             "redirect": "/api/ContactFormHttpFunction",
