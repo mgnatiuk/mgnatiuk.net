@@ -30,21 +30,14 @@ function sendEmail(form) {
         contentType: "application/json",
         success: function (result) {
             console.log(result);
+            resetValues("contact-form");
+            swal("Success", "Email was sent", "success");
         },
         error: function (result, status) {
             console.log(result);
         }
     });
 }
-
-// function sendEmail(form) {
-//     var xhr = new XMLHttpRequest();
-//     var base = "http://localhost:7071/api/ContactFormHttpFunction?name=";
-//     xhr.open("POST", base + form.name + "&email=" + form.email + "&subject=" + form.subject + "&message=" + form.message, true);
-//     xhr.send();
-//     resetValues("contact-form");
-//     swal("Success", "Email was sent", "success");
-// }
 
 function validteForm(form) {
     if (!form.name || !form.email || !form.subject || !form.message) {
