@@ -1,12 +1,13 @@
 {
-    "routes": [
+    "route": [
         {
             "route": "/send",
-            "serve": "/api/ContactFormHttpFunction"
+            "redirect": "/api/ContactFormHttpFunction",
+            "statusCode": 301
         },
         {
             "route": "/home",
-            "serve": "/#home",
+            "redirect": "/#home",
             "statusCode": 301
         }
     ],
