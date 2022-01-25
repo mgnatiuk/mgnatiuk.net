@@ -46,19 +46,19 @@ function sendEmail(form) {
 //     swal("Success", "Email was sent", "success");
 // }
 
-// function validteForm(form) {
-//     if (!form.name || !form.email || !form.subject || !form.message) {
-//         swal("Warning", "Some fields of this form are empty.", "warning");
-//         return true;
-//     }
+function validteForm(form) {
+    if (!form.name || !form.email || !form.subject || !form.message) {
+        swal("Warning", "Some fields of this form are empty.", "warning");
+        return true;
+    }
 
-//     if (!validateEmail(form.email)) {
-//         swal("Warning", "Email is not valid.", "warning");
-//         return true;
-//     }
+    if (!validateEmail(form.email)) {
+        swal("Warning", "Email is not valid.", "warning");
+        return true;
+    }
 
-//     return false;
-// }
+    return false;
+}
 
 function validateEmail(email) {
     var re = /\S+@\S+\.\S+/;
