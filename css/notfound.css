@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap");
+
+:root {
+    --main-gradient-color: linear-gradient(to top, #214382 0%, #1f4180 1%, #2a5298 100%) !important;
+    --main-gradient-color-hover: linear-gradient(to top, #2e5cb0 0%, #224b98 1%, #1b57be 100%) !important;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-image: var(--main-gradient-color);
+}
+
+#notfound {
+    position: relative;
+    height: 100vh;
+}
+
+#notfound .notfound {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.notfound {
+    max-width: 767px;
+    width: 100%;
+    line-height: 1.4;
+    text-align: center;
+    padding: 15px;
+}
+
+.notfound .notfound-404 {
+    position: relative;
+    height: 220px;
+}
+
+.notfound .notfound-404 h1 {
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 186px;
+    margin: 0px;
+    background: linear-gradient(130deg, #0d6efd, var(--bs-dark));
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-transform: uppercase;
+}
+
+.notfound h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 33px;
+    font-weight: 200;
+    text-transform: uppercase;
+    margin-top: 0px;
+    margin-bottom: 25px;
+    letter-spacing: 3px;
+    color: var(--bs-light);
+}
+
+.notfound p {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    margin-top: 0px;
+    margin-bottom: 25px;
+    color: var(--bs-light);
+}
+
+.notfound a {
+    font-family: "Poppins", sans-serif;
+    color: var(--bs-light);
+    font-weight: 200;
+    text-decoration: none;
+    border-bottom: 1px dashed var(--bs-light);
+    border-radius: 2px;
+}
+
+.notfound-social > a {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
+    font-size: 14px;
+    color: var(--bs-light);
+    border: 1px solid var(--bs-light);
+    border-radius: 50%;
+    margin: 3px;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+}
+
+.notfound-social > a:hover {
+    color: #fff;
+    background-color: #ff6f68;
+    border-color: #ff6f68;
+}
+
+@media only screen and (max-width: 480px) {
+    .notfound .notfound-404 {
+        position: relative;
+        height: 168px;
+    }
+
+    .notfound .notfound-404 h1 {
+        font-size: 142px;
+    }
+
+    .notfound h2 {
+        font-size: 22px;
+    }
+}

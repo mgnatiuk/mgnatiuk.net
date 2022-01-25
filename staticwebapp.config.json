@@ -3,10 +3,6 @@
         {
             "route": "/send",
             "rewrite": "/api/ContactFormHttpFunction"
-        },
-        {
-            "route": "/home",
-            "rewrite": "/#home"
         }
     ],
     "responseOverrides": {
