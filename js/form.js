@@ -23,27 +23,42 @@ function sendForm() {
 }
 
 function sendEmail(form) {
-    var xhr = new XMLHttpRequest();
-    var base = "aHR0cHM6Ly9tZ25hdGl1ay5uZXQvc2VuZD9uYW1lPQ==";
-    xhr.open("POST", atob(base) + form.name + "&email=" + form.email + "&subject=" + form.subject + "&message=" + form.message, true);
-    xhr.send();
-    resetValues("contact-form");
-    swal("Success", "Email was sent", "success");
+    $.ajax({
+        type: "POST",
+        url: "https://mgnatiuk.net/send",
+        data: form,
+        dataType: "json",
+        success: function () {
+            if (xhr.readyState === 4) {
+                console.log(xhr.status);
+                console.log(xhr.responseText);
+            }
+        }
+    });
 }
 
-function validteForm(form) {
-    if (!form.name || !form.email || !form.subject || !form.message) {
-        swal("Warning", "Some fields of this form are empty.", "warning");
-        return true;
-    }
+// function sendEmail(form) {
+//     var xhr = new XMLHttpRequest();
+//     var base = "aHR0cHM6Ly9tZ25hdGl1ay5uZXQvc2VuZD9uYW1lPQ==";
+//     xhr.open("POST", atob(base) + form.name + "&email=" + form.email + "&subject=" + form.subject + "&message=" + form.message, true);
+//     xhr.send();
+//     resetValues("contact-form");
+//     swal("Success", "Email was sent", "success");
+// }
 
-    if (!validateEmail(form.email)) {
-        swal("Warning", "Email is not valid.", "warning");
-        return true;
-    }
+// function validteForm(form) {
+//     if (!form.name || !form.email || !form.subject || !form.message) {
+//         swal("Warning", "Some fields of this form are empty.", "warning");
+//         return true;
+//     }
 
-    return false;
-}
+//     if (!validateEmail(form.email)) {
+//         swal("Warning", "Email is not valid.", "warning");
+//         return true;
+//     }
+
+//     return false;
+// }
 
 function validateEmail(email) {
     var re = /\S+@\S+\.\S+/;

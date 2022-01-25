@@ -18,11 +18,14 @@ namespace ContactFormHttpFunction
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
         {
-            string json = await req.ReadAsStringAsync();
-            MessageDto message = JsonConvert.DeserializeObject<MessageDto>(json);
-            message.Id = Guid.NewGuid();
+            string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
+            dynamic data = JsonConvert.DeserializeObject<MessageDto>(requestBody);
 
-            string responseMessage = "OK: " + json;
+            //string json = await req.ReadAsStringAsync();
+            //MessageDto message = JsonConvert.DeserializeObject<MessageDto>(json) ?? new MessageDto();
+            //message.Id = Guid.NewGuid();
+
+            string responseMessage = "OK: " + requestBody;
 
             return new OkObjectResult(responseMessage);
         }
