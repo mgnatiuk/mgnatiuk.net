@@ -9,6 +9,7 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using ContactFormHttpFunction.dto;
 using Telegram.Bot;
+using Telegram.Bot.Types;
 
 namespace ContactFormHttpFunction
 {
@@ -22,21 +23,17 @@ namespace ContactFormHttpFunction
             MessageDto message = JsonConvert.DeserializeObject<MessageDto>(requestBody);
             message.Id = Guid.NewGuid();
 
+            string body = $"New message from: {message.Name} ({message.Email}).\nSubject: {message.Subject}.\n Message:\n{message.Message}";
+
             string telegramBotToken = "5190646778:AAGrG9mYpvRE9SSU8wfNmlrxqVy7i9MixYg";
 
             var botClient = new TelegramBotClient(telegramBotToken);
 
-            //var me = await botClient.GetMeAsync();
-            Console.WriteLine($"Hello, World! I am user {message.Id} and my name is {message.Name}.");
+            Message msg = await botClient.SendTextMessageAsync(
+                chatId: 248709041,
+                text: body);
 
-
-            //string json = await req.ReadAsStringAsync();
-            //MessageDto message = JsonConvert.DeserializeObject<MessageDto>(json) ?? new MessageDto();
-            //message.Id = Guid.NewGuid();
-
-            string responseMessage = "OK: " + requestBody;
-
-            return new OkObjectResult(responseMessage);
+            return new OkObjectResult(body);
         }
     }
 }
