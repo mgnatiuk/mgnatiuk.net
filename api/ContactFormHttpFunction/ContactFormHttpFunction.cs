@@ -25,9 +25,6 @@ namespace ContactFormHttpFunction
 
             string body = $"👤 NEW MESSAGE FROM\n{message.Name} ({message.Email})\n\n📍 SUBJECT: \n{message.Subject}\n\n📧 MESSAGE:\n{message.Message}";
 
-
-
-
             var botClient = new TelegramBotClient(Environment.GetEnvironmentVariable("TELEGRAM_BOT_TOKEN"));
 
             await botClient.SendTextMessageAsync(
