@@ -34,7 +34,6 @@ function sendEmail(form) {
         },
         error: function (result, status) {
             console.log(result);
-            swal("Error", result, "error");
         }
     });
 }
