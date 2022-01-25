@@ -23,7 +23,7 @@ namespace ContactFormHttpFunction
             MessageDto message = JsonConvert.DeserializeObject<MessageDto>(requestBody);
             message.Id = Guid.NewGuid();
 
-            string body = $"👤 NEW MESSAGE FROM\n{message.Name} ({message.Email})\n\n📍 SUBJECT: {message.Subject}\n\n📧 MESSAGE:\n\n{message.Message}";
+            string body = $"👤 NEW MESSAGE FROM\n{message.Name} ({message.Email})\n\n📍 SUBJECT: \n{message.Subject}\n\n📧 MESSAGE:\n\n{message.Message}";
 
             string telegramBotToken = "5190646778:AAGrG9mYpvRE9SSU8wfNmlrxqVy7i9MixYg";
 
