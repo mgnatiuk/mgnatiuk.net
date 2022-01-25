@@ -2,11 +2,12 @@
     "route": [
         {
             "route": "/send",
-            "rewrite": "/api/ContactFormHttpFunction"
+            "redirect": "/api/ContactFormHttpFunction",
+            "statusCode": 301
         },
         {
             "route": "/home",
-            "rewrite": "/#home"
+            "redirect": "/#home"
         }
     ],
     "responseOverrides": {
