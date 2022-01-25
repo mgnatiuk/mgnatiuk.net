@@ -9,34 +9,35 @@ function getValueById(id) {
 
 function sendForm() {
 
-    var formData = {
+    var form = {
         name: getValueById("name"),
-        from: getValueById("from"),
+        email: getValueById("email"),
         subject: getValueById("subject"),
-        text: getValueById("text")
+        message: getValueById("message")
     }
 
-    if (validteForm(formData))
+    if (validteForm(form))
         return false;
 
-    sendEmail(formData);
+    sendEmail(form);
 }
 
-function sendEmail(formData) {
+function sendEmail(form) {
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", atob("aHR0cHM6Ly9tZ25hdGl1ay1mdW5jdGlvbnMuYXp1cmV3ZWJzaXRlcy5uZXQvYXBpL1JlY2l2ZUVtYWlsRnVuY3Rpb24/Y29kZT1RemVqTGNWNkQwN0dMZzFwdVdmT3VhcGxlSHJQWUo2TmVhNGFEWE04YXRQVkMxZURYSlA4WHc9PSZmcm9tPQ==") + formData.from + "&subject=" + formData.subject + "&text=" + formData.text + "&name=" + formData.name, true);
+    var base = "aHR0cHM6Ly9tZ25hdGl1ay5uZXQvc2VuZD9uYW1lPQ==";
+    xhr.open("POST", atob(base) + form.name + "&email=" + form.email + "&subject=" + form.subject + "&message=" + form.message, true);
     xhr.send();
     resetValues("contact-form");
     swal("Success", "Email was sent", "success");
 }
 
-function validteForm(formData) {
-    if (!formData.name || !formData.from || !formData.subject || !formData.text) {
+function validteForm(form) {
+    if (!form.name || !form.email || !form.subject || !form.message) {
         swal("Warning", "Some fields of this form are empty.", "warning");
         return true;
     }
 
-    if (!validateEmail(formData.from)) {
+    if (!validateEmail(form.email)) {
         swal("Warning", "Email is not valid.", "warning");
         return true;
     }
