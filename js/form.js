@@ -29,11 +29,11 @@ function sendEmail(form) {
         data: JSON.stringify(form),
         contentType: "application/json",
         success: function (result) {
-            console.log(result);
             resetValues("contact-form");
             swal("Success", "Email was sent", "success");
         },
         error: function (result, status) {
+            console.log(result);
             swal("Error", result, "error");
         }
     });

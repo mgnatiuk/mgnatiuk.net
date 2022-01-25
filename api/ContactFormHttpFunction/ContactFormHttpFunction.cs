@@ -28,7 +28,7 @@ namespace ContactFormHttpFunction
             var botClient = new TelegramBotClient(Environment.GetEnvironmentVariable("TELEGRAM_BOT_TOKEN"));
 
             await botClient.SendTextMessageAsync(
-                chatId: Environment.GetEnvironmentVariable("TELEGRAM_CHAT_ID"),
+                chatId: long.Parse(Environment.GetEnvironmentVariable("TELEGRAM_CHAT_ID")),
                 text: body);
 
             return new OkObjectResult(body);
