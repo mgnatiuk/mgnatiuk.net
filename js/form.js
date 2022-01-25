@@ -26,21 +26,21 @@ function sendEmail(form) {
     $.ajax({
         type: "POST",
         url: "https://mgnatiuk.net/send",
-        data: form,
-        dataType: "json",
-        success: function () {
-            if (xhr.readyState === 4) {
-                console.log(xhr.status);
-                console.log(xhr.responseText);
-            }
+        data: JSON.stringify(form),
+        contentType: "application/json",
+        success: function (result) {
+            console.log(result);
+        },
+        error: function (result, status) {
+            console.log(result);
         }
     });
 }
 
 // function sendEmail(form) {
 //     var xhr = new XMLHttpRequest();
-//     var base = "aHR0cHM6Ly9tZ25hdGl1ay5uZXQvc2VuZD9uYW1lPQ==";
-//     xhr.open("POST", atob(base) + form.name + "&email=" + form.email + "&subject=" + form.subject + "&message=" + form.message, true);
+//     var base = "http://localhost:7071/api/ContactFormHttpFunction?name=";
+//     xhr.open("POST", base + form.name + "&email=" + form.email + "&subject=" + form.subject + "&message=" + form.message, true);
 //     xhr.send();
 //     resetValues("contact-form");
 //     swal("Success", "Email was sent", "success");
