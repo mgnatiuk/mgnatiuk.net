@@ -34,7 +34,7 @@ function sendEmail(form) {
             swal("Success", "Email was sent", "success");
         },
         error: function (result, status) {
-            console.log(result);
+            swal("Error", result, "error");
         }
     });
 }
