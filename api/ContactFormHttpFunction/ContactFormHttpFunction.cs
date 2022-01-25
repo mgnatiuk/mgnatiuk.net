@@ -25,12 +25,10 @@ namespace ContactFormHttpFunction
 
             string body = $"👤 NEW MESSAGE FROM\n{message.Name} ({message.Email})\n\n📍 SUBJECT: \n{message.Subject}\n\n📧 MESSAGE:\n\n{message.Message}";
 
-            string telegramBotToken = "${{secrets.TELEGRAM_BOT_TOKE}}";
+            var botClient = new TelegramBotClient(Environment.GetEnvironmentVariable("TELEGRAM_BOT_TOKEN"));
 
-            var botClient = new TelegramBotClient(telegramBotToken);
-
-            Message msg = await botClient.SendTextMessageAsync(
-                chatId: "${{secrets.TELEGRAM_CHAT_ID}}",
+            await botClient.SendTextMessageAsync(
+                chatId: Environment.GetEnvironmentVariable("TELEGRAM_CHAT_ID"),
                 text: body);
 
             return new OkObjectResult(body);
