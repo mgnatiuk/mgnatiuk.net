@@ -30,7 +30,7 @@ function sendEmail(form) {
         contentType: "application/json",
         success: function (result) {
             resetValues("contact-form");
-            swal("Success", "Email was sent", "success");
+            swal("Success", "Message was sent", "success");
         },
         error: function (result, status) {
             console.log(result);
