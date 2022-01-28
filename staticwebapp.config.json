@@ -1,0 +1,13 @@
+{
+    "routes": [
+        {
+            "route": "/send",
+            "rewrite": "/api/ContactFormHttpFunction"
+        }
+    ],
+    "responseOverrides": {
+        "404": {
+            "rewrite": "/404.html"
+        }
+    }
+}
