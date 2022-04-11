@@ -9,7 +9,6 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using ContactFormHttpFunction.dto;
 using Telegram.Bot;
-using Telegram.Bot.Types;
 
 namespace ContactFormHttpFunction
 {
