@@ -6,7 +6,7 @@ namespace ContactFormHttpFunction.dto
 {
 	public class MessageDto
 	{
-        public Guid? Id { get; set; }
+        public Guid? Id { get; set; } = Guid.NewGuid();
 
         [Required]
         [JsonProperty("name")]
