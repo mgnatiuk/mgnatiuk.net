@@ -9,6 +9,7 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using ContactFormHttpFunction.dto;
 using Telegram.Bot;
+using System.Net;
 
 namespace ContactFormHttpFunction
 {
@@ -18,15 +19,23 @@ namespace ContactFormHttpFunction
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)]
             HttpRequest req,
-            ILogger log)
+            ILogger logger)
         {
-            MessageDto dto = await GetMessageDto(req);
+            try
+            {
+                MessageDto dto = await GetMessageDto(req);
 
-            string body = GenerateMessage(dto);
+                string body = GenerateMessage(dto);
 
-            await ConfigureTelegramBot(body);
+                await ConfigureTelegramBot(body);
 
-            return new OkObjectResult(body);
+                return new OkObjectResult(body);
+            }
+            catch (Exception exception)
+            {
+                logger.LogError($"Error: {exception.Message}");
+                return new BadRequestObjectResult(exception.Message);
+            }
         }
 
         private static async Task ConfigureTelegramBot(string body)
