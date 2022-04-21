@@ -26,7 +26,7 @@ namespace ContactFormHttpFunction
 
                 string body = GenerateMessageBody(dto);
 
-                TelegramBotClient botClient = ConfigureTelegramBot(body);
+                TelegramBotClient botClient = ConfigureTelegramBotClient(body);
 
                 await SendMessageToBot(body, botClient);
 
@@ -39,7 +39,7 @@ namespace ContactFormHttpFunction
             }
         }
 
-        private static TelegramBotClient ConfigureTelegramBot(string body)
+        private static TelegramBotClient ConfigureTelegramBotClient(string body)
         {
             var botClient = new TelegramBotClient(Environment.GetEnvironmentVariable("TELEGRAM_BOT_TOKEN"));
 
