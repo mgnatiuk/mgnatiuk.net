@@ -9,7 +9,6 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using ContactFormHttpFunction.dto;
 using Telegram.Bot;
-using System.Net;
 
 namespace ContactFormHttpFunction
 {
@@ -23,11 +22,13 @@ namespace ContactFormHttpFunction
         {
             try
             {
-                MessageDto dto = await GetMessageDto(req);
+                MessageDto dto = await GetMessageDtoFromRequest(req);
 
-                string body = GenerateMessage(dto);
+                string body = GenerateMessageBody(dto);
 
-                await ConfigureTelegramBot(body);
+                TelegramBotClient botClient = ConfigureTelegramBot(body);
+
+                await SendMessageToBot(body, botClient);
 
                 return new OkObjectResult(body);
             }
@@ -38,23 +39,32 @@ namespace ContactFormHttpFunction
             }
         }
 
-        private static async Task ConfigureTelegramBot(string body)
+        private static TelegramBotClient ConfigureTelegramBot(string body)
         {
             var botClient = new TelegramBotClient(Environment.GetEnvironmentVariable("TELEGRAM_BOT_TOKEN"));
 
-            await botClient.SendTextMessageAsync(
-                chatId: long.Parse(Environment.GetEnvironmentVariable("TELEGRAM_CHAT_ID")),
-                text: body);
+            return botClient;
+            
         }
 
-        private static string GenerateMessage(MessageDto dto)
+        private static async Task SendMessageToBot(string body, TelegramBotClient botClient)
+        {
+            long chatId = 0;
+            long.TryParse(Environment.GetEnvironmentVariable("TELEGRAM_CHAT_ID"), out chatId);
+
+            await botClient.SendTextMessageAsync(
+                            chatId: chatId,
+                            text: body);
+        }
+
+        private static string GenerateMessageBody(MessageDto dto)
         {
             string message = $"👤 NEW MESSAGE FROM\n{dto.Name} ({dto.Email})\n\n📍 SUBJECT: \n{dto.Subject}\n\n📧 MESSAGE:\n{dto.Message}";
 
             return message;
         }
 
-        private static async Task<MessageDto> GetMessageDto(HttpRequest request)
+        private static async Task<MessageDto> GetMessageDtoFromRequest(HttpRequest request)
         {
             string requestBody = await new StreamReader(request.Body).ReadToEndAsync();
 
