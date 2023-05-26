@@ -11404,7 +11404,6 @@ button:focus {
 @media (max-width: 420px) {
   .card {
     min-height: 300px;
-    margin: 10px;
   }
 
   .card-title {
